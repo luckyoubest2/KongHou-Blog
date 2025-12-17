@@ -3,8 +3,8 @@ title: 文章模板
 subtitle: 
 date: 2025-12-17T20:55:39+08:00
 slug: a7416d2
-draft: true
-description: 藐视
+draft: false
+description: 
 keywords:
 license:
 comment: false
@@ -45,39 +45,17 @@ repost:
 ```
 
 ---
-title: 
-subtitle:
-date: 2025-12-17T20:55:39+08:00
-draft: true
-description:
-keywords:
-license:
-comment: false
-weight: 0
+title: 我的第一篇文章
+date: 2025-12-17T20:40:00+08:00
+draft: false
 tags:
-  - 
+ - 测试
 categories:
-  - 
+ - 测试文本
 collections:
- - 
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromRelated: false
-hiddenFromFeed: false
-summary:
-resources:
-  - name: featured-image
-    src: featured-image.jpg
-  - name: featured-image-preview
-    src: featured-image-preview.jpg
-toc: true
-math: false
-lightgallery: false
-password:
-message:
-repost:
-  enable: true
-  url:
+ - 建站笔记   
 ---
+
+<!--more-->
 
 ```
