@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>测试文本 - 分类 - 箜篌簿</title>
+    <link>http://localhost:1313/categories/%E6%B5%8B%E8%AF%95%E6%96%87%E6%9C%AC/</link>
+    <description>箜篌簿</description>
+    <generator>Hugo 0.152.2 &amp; FixIt v0.3.20</generator>
+    <language>zh-cn</language>
+    <managingEditor>aisibi2b@163.com (蔡箜篌)</managingEditor>
+    <webMaster>aisibi2b@163.com (蔡箜篌)</webMaster>
+    <lastBuildDate>Wed, 17 Dec 2025 20:33:40 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E6%B5%8B%E8%AF%95%E6%96%87%E6%9C%AC/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我的第一篇文章</title>
+      <link>http://localhost:1313/posts/my-first-post/</link>
+      <pubDate>Wed, 17 Dec 2025 20:40:00 +0800</pubDate><author>aisibi2b@163.com (蔡箜篌)</author>
+      <guid>http://localhost:1313/posts/my-first-post/</guid>
+      <category domain="http://localhost:1313/categories/%E6%B5%8B%E8%AF%95%E6%96%87%E6%9C%AC/">测试文本</category>
+      <description>&lt;p&gt;这是一条测试文本&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

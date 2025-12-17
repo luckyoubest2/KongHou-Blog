@@ -1,0 +1,8 @@
+// 引入字体 https://chinese-font.netlify.app/zh-cn/cdn/
+@import url('https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Light/result.css');
+// 自定义字体
+html,body {
+   font-family: "LXGW WenKai Light";
+   font-weight: normal;
+   font-size: 1rem;
+}
