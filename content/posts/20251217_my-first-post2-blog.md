@@ -15,7 +15,7 @@ tags:
 categories:
   - 受控文件
 collections:
- - 建站笔记
+  - 建站笔记
 hiddenFromHomePage: false
 hiddenFromSearch: false
 hiddenFromRelated: false

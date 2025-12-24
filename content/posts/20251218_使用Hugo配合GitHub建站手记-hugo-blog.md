@@ -3,12 +3,12 @@ title: 使用Hugo配合GitHub建站手记
 date: 2025-12-18T12:50:00+08:00
 draft: false
 tags:
- - Hugo
- - GitHub
+  - Hugo
+  - GitHub
 categories:
- - 解决方案
+  - 解决方案
 collections:
- - 建站笔记  
+  - 建站笔记
 ---
 
 
@@ -100,8 +100,8 @@ hugo server
    ```Go
    git init
    git submodule add https://github.com/hugo-fixit/FixIt.git themes/FixIt
-   echo "theme = 'FixIt'" >> hugo.toml
-   echo "defaultContentLanguage = 'zh-cn'" >> hugo.toml
+echo "theme = 'FixIt'" >> hugo.toml
+echo "defaultContentLanguage = 'zh-cn'" >> hugo.toml
    hugo server
    ```
 
@@ -260,4 +260,3 @@ jobs:
 [Fixit-主题美化记录 | 毕少侠](https://geekswg.js.cool/posts/2023/fixit-beautification/)
 
 [Fixit-主题美化 - 字节飞鸿](https://benelin.site/posts/hugo-fixit/a9f08a3/)
-

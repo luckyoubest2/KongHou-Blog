@@ -3,13 +3,13 @@ title: 在CherryStudio中配置虎鲸笔记MCP的方法
 date: 2025-12-08T20:40:00+08:00
 draft: false
 tags:
- - CherryStudio
- - 虎鲸笔记
- - MCP
+  - CherryStudio
+  - 虎鲸笔记
+  - MCP
 categories:
- - 解决方案
+  - 解决方案
 collections:
- - 笔记软件相关  
+  - 笔记软件相关
 ---
 
 
@@ -121,4 +121,3 @@ Authorization=Bearer example-use
 在 Cherry Studio 中的使用效果如下：
 
 ![image-20251208112904757](https://cdn.jsdelivr.net/gh/luckyoubest2/Bolg-IMG/202512081137909.png)
-
