@@ -1,5 +1,5 @@
 // 引入字体 https://chinese-font.netlify.app/zh-cn/cdn/
-@import url('https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Light/result.css');
+@import url('https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWenKai-Light/result.css');
 // 自定义字体
 html,body {
    font-family: "LXGW WenKai Light";
@@ -17,9 +17,85 @@ html,body {
     background-image: linear-gradient(90deg, rgba(60, 10, 30, .04) 3%, transparent 0), linear-gradient(1turn, rgba(60, 10, 30, .04) 3%, transparent 0);
     background-size: 20px 20px;
     background-position: center;
-  
+
     [data-theme='dark'] & {
       background-image: linear-gradient(90deg, rgba(195, 245, 215, .04) 3%, transparent 0), linear-gradient(1turn, rgba(195, 245, 215, .04) 3%, transparent 0);
     }
+  }
+}
+
+// ============================================================================
+// Patch 2026-08-12: FixIt v0.4.5 GH Pages 字体路径修复 + TOC 视觉
+// ----------------------------------------------------------------------------
+// 问题 1: Font Awesome 7 字体文件实际部署在 /lib/webfonts/ 但 CSS 期望路径
+//         /lib/fontawesome-free/webfonts/（相对路径错位）。结果所有图标（菜单
+//         分类/合集/标签/归档、搜索图标、主题切换按钮、底部 Hugo/FixIt logo 的
+//         fontawesome 版本）都显示成空方框或 unicode 占位。
+// 修复: 重写 @font-face，用绝对路径指向 /KongHou-Blog/lib/webfonts/。
+//       注意：baseURL 子路径 /KongHou-Blog/ 硬编码到这里；如果换 custom domain
+//       部署，需同步改成 "/" 或删除此 patch。
+// ============================================================================
+
+@font-face {
+  font-family: "Font Awesome 7 Free";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("/KongHou-Blog/lib/webfonts/fa-regular-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Font Awesome 7 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("/KongHou-Blog/lib/webfonts/fa-solid-900.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Font Awesome 7 Brands";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("/KongHou-Blog/lib/webfonts/fa-brands-400.woff2") format("woff2");
+}
+
+// ============================================================================
+// 问题 2: TOC 浮动在屏幕最右侧 264px 宽区域，背景透明无边框无阴影，跟右边
+//         大片空白融为一体，视觉上"看不出来"虽然 DOM 上 sticky 是工作的。
+// 修复: 给 aside.toc 加卡片样式 + 顶部分隔线 + 间距，让它"独立存在"在屏幕
+//       右侧。和官方 starter 推荐的 widgets 风格一致。
+// ============================================================================
+
+#toc-auto {
+  background-color: var(--card-bg, #fff);
+  border: 1px solid var(--card-border, #e6e6e6);
+  border-radius: 8px;
+  padding: 0.75rem 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .04);
+  // v0.4.5 主题默认 visibility:hidden（等 JS 切），保险起见在这里强制 visible，
+  // 避免 JS 加载失败时 TOC 整块消失。
+  visibility: visible !important;
+
+  [data-theme='dark'] & {
+    background-color: #1f2125;
+    border-color: #363636;
+  }
+
+  .toc-title {
+    border-bottom: 1px solid var(--card-border, #e6e6e6);
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color, #363636);
+    font-weight: 600;
+
+    [data-theme='dark'] & {
+      color: #d1d1d1;
+    }
+  }
+}
+
+// 把 aside 跟 article 拉开间距
+.page .single {
+  > aside.toc {
+    margin-left: 1rem;
   }
 }
