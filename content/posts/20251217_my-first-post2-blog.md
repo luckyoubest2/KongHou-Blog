@@ -11,7 +11,6 @@ comment: false
 weight: 0
 tags:
   - 模板
-  - 表头
 categories:
   - 受控文件
 collections:
