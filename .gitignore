@@ -5,3 +5,5 @@ resources
 
 # hugo命令
 hugo.exe
+/.worktrees
+*.exe
